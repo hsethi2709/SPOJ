@@ -2,7 +2,7 @@ import math
 t=int(input())
 for z in range(t):
     lower,upper=map(int,input().split())
-    def simple_sieve(n,arr):
+    def simple_sieve(n,arr): #finding prime numbers from 2 to sqrt(n)
         a=[True]*(n+1)
         p=2
         while(p*p<=n):
@@ -30,7 +30,7 @@ for z in range(t):
         low=lower
     high=low+limit
 
-    while(low<upper):
+    while(low<upper):          #marking the non-prime numbers with the help of prime numbers recieved from simple_sieve()
         if(high>upper):
             high=upper+1
         mark=[True]*(limit)
